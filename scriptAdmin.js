@@ -10,11 +10,14 @@ $(function() {
         termekek.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
 
-            const obj = new TermekAruhaz(node, elem);
+            const obj = new TermekAdmin(node, elem);
            // TermekTabla.push(obj);//példányok táblába
 
         });
         sablonElem.remove(); //sablonelem eltávolítása
     }
+
+    $(window).on("termekTorol", () => 
+    console.log("töröltem"))
 
 });
